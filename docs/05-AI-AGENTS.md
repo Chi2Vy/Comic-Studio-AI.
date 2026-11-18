@@ -1,6 +1,6 @@
-# Agent contracts — mục tiêu, chưa được chạy trong Phase 1
+# Role/Task Templates để điều phối GPT bên ngoài
 
-Không cần 9 mô hình LLM riêng. Agent có vai trò, skill và quyền rõ ràng, chia sẻ adapter nền tảng nhưng **truy hồi dữ liệu chỉ theo một project_id**.
+Không có yêu cầu chạy 9 mô hình AI bên trong. Mỗi agent trong bảng dưới đây là **role + prompt template + quy tắc đầu vào/đầu ra**, được Prompt Compiler dùng để giao nhiệm vụ cho GPT bên ngoài. Chỉ truy hồi dữ liệu theo project_id. Xem [đặc tả](09-GPT-ORCHESTRATION.md).
 
 | Agent | Đầu vào | Đầu ra | Bất biến |
 |---|---|---|---|
