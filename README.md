@@ -1,6 +1,6 @@
 # Comic Studio AI
 
-**Local-first Studio**: chuyển thể tiểu thuyết, kịch bản hoặc ý tưởng thành truyện tranh theo quy trình có người kiểm duyệt.
+**Local-first GPT orchestration studio**: công cụ điều hành quá trình chuyển thể bằng GPT/AI bên ngoài, quản lý thiết lập, Skill, prompt, nguồn, QC và các bản sửa. Không bắt buộc tích hợp hay chạy mô hình AI bên trong.
 
 > Trạng thái: **Phase 1 — foundation (prototype)**. Chưa tích hợp mô hình LLM, sinh ảnh, OCR, inpainting hoặc tự động xuất bản. Không khẳng định các chức năng đó đã hoạt động.
 
@@ -38,6 +38,10 @@ cd backend
 pip install -r requirements-dev.txt
 pytest -q
 ```
+
+## Trọng tâm sản phẩm
+
+Bắt đầu từ **Prompt Desk**: chọn dự án/phạm vi/skill, tự chuẩn bị gói lệnh, sao chép sang ChatGPT, nhập kết quả về và kiểm duyệt. Xem [đặc tả điều phối GPT](docs/09-GPT-ORCHESTRATION.md). Các model local/GPU/API tích hợp là tùy chọn, không thuộc lõi.
 
 ## Phạm vi bản đầu
 - Tạo/list dự án; quản lý chương, nhân vật, beat nguồn và trạng thái xác minh.

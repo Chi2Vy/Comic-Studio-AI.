@@ -1,5 +1,9 @@
 # Kiến trúc Local-first
 
+## Điều chỉnh kiến trúc 18/11/2026
+
+**Ưu tiên mới:** React + FastAPI + SQLite làm Prompt Compiler / Task Ledger / Skill Registry / Canon Ledger / Result Intake / QC Review cho GPT bên ngoài. Ollama, ComfyUI, Job Worker, model-serving và kết nối API trở thành tùy chọn giai đoạn sau, không phải mục tiêu xây dựng lõi. Xem [đặc tả GPT-Orchestration](09-GPT-ORCHESTRATION.md).
+
 ## Kiến trúc mục tiêu
 ```
 React/Vite UI ──HTTP── FastAPI BFF/API ── SQLite (Phase 1)

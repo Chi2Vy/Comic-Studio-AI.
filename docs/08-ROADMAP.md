@@ -1,4 +1,15 @@
-# Roadmap sản phẩm — lựa chọn A
+# Roadmap — lựa chọn A (GPT Orchestration First)
+
+**Quyết định mới:** Studio là công cụ quản lý thiết lập, skill, prompt, kết quả và QA cho GPT bên ngoài. Các hạng mục Ollama/ComfyUI/render worker phía dưới là **tùy chọn**, không phải hướng ưu tiên.
+
+## MVP ưu tiên mới
+- [ ] A1: Prompt Desk, prompt compiler theo project/chap/page/panel, template/Skill, copy/export, warnings.
+- [ ] A2: Task ledger, prompt pack version, import kết quả GPT text/ảnh, link phạm vi và nguồn.
+- [ ] A3: QC G0–G6 có chứng cứ, sinh lệnh sửa đúng panel/vùng, giữ bản đã khóa.
+- [ ] A4: Feedback-to-Skill có duyệt, adapter chính thức tự động tùy chọn.
+
+Chi tiết: [09-GPT-ORCHESTRATION.md](09-GPT-ORCHESTRATION.md).
+
 
 ## Phase 1 — Foundation [đang triển khai]
 - [x] Khởi tạo repository, PRD, architecture, workflow, database, UI/QC, agent contracts.
