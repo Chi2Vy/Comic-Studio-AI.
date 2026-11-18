@@ -10,7 +10,8 @@
 **Exit:** Tạo 2 project không lẫn dữ liệu, demo quản lý đơn giản, chạy thử trên Windows.
 
 ## Phase 2 — Story intelligence
-- [ ] Upload TXT/DOCX/EPUB/PDF với quyền nguồn và giới hạn kích thước.
+- [x] Nhập TXT/DOCX/EPUB/PDF text-layer với xác nhận quyền, giới hạn 8MB; phân đoạn tiêu đề chương (bước đầu).
+- [ ] Chuẩn hóa và chỉnh sửa ranh giới chương; kiểm thử PDF/EPUB phức tạp và bổ sung OCR scan sau.
 - [ ] Source ledger/chapter extraction/RAG theo project_id.
 - [ ] Ollama adapter; biên kịch từ brief/script có sẵn; có evidence & verified flags.
 - [ ] Xuất RESEARCH / BEATS / adaptation map; review UI.

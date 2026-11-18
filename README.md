@@ -15,7 +15,7 @@ cd backend
 python -m venv .venv
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 # macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
@@ -41,6 +41,7 @@ pytest -q
 
 ## Phạm vi bản đầu
 - Tạo/list dự án; quản lý chương, nhân vật, beat nguồn và trạng thái xác minh.
+- Nhập bản thảo TXT/DOCX/EPUB/PDF có lớp văn bản trong mục **Nghiên cứu nguồn**; tự nhận diện tiêu đề chương và xem nội dung cục bộ. Giới hạn 8 MB/tệp; chưa có AI biên kịch hoặc OCR.
 - Bộ phận Studio, Style/Mood/Mode có cấu hình mẫu.
 - Chạy local, không cần khóa API, dữ liệu từng truyện được tách theo `project_id`.
 - Chưa tạo tranh hay tự động đọc/viết nội dung bằng AI. Khu vực AI trên giao diện chỉ là vị trí dành cho giai đoạn sau.
