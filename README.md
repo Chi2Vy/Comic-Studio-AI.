@@ -1,7 +1,58 @@
 # Comic Studio AI
 
-Studio chuyển thể truyện chữ thành truyện tranh theo quy trình nhiều công đoạn (local-first).
+**Local-first Studio**: chuyển thể tiểu thuyết, kịch bản hoặc ý tưởng thành truyện tranh theo quy trình có người kiểm duyệt.
 
-> **Trạng thái:** Giai đoạn 1 — nền tảng dự án, chưa có AI tạo tranh hay tự động xuất bản.
+> Trạng thái: **Phase 1 — foundation (prototype)**. Chưa tích hợp mô hình LLM, sinh ảnh, OCR, inpainting hoặc tự động xuất bản. Không khẳng định các chức năng đó đã hoạt động.
 
-Bản đặc tả và ứng dụng thử nghiệm sẽ được phát triển theo `docs/ROADMAP.md`. Các dữ liệu nguyên tác, bản thảo, tranh tham chiếu và thông tin riêng không được tự động đẩy lên repository Public.
+## Bắt đầu nhanh
+
+Cần Python 3.11+ và Node.js 20+.
+
+### 1. API
+
+```bash
+cd backend
+python -m venv .venv
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+API: http://127.0.0.1:8000/docs — dữ liệu SQLite lưu ở `~/.comic-studio-ai/studio.db` (có thể đặt biến môi trường `COMIC_STUDIO_DATA_DIR`).
+
+### 2. Giao diện
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Mở http://localhost:5173. Máy local chạy hai terminal. Chưa có xác thực người dùng; **không mở cổng ra Internet/LAN** ở phiên bản này.
+
+### 3. Kiểm thử API
+
+```bash
+cd backend
+pip install -r requirements-dev.txt
+pytest -q
+```
+
+## Phạm vi bản đầu
+- Tạo/list dự án; quản lý chương, nhân vật, beat nguồn và trạng thái xác minh.
+- Bộ phận Studio, Style/Mood/Mode có cấu hình mẫu.
+- Chạy local, không cần khóa API, dữ liệu từng truyện được tách theo `project_id`.
+- Chưa tạo tranh hay tự động đọc/viết nội dung bằng AI. Khu vực AI trên giao diện chỉ là vị trí dành cho giai đoạn sau.
+
+## Tài liệu và quản trị
+
+- [PRD](docs/01-PRD.md) · [Kiến trúc](docs/02-ARCHITECTURE.md) · [Workflow](docs/03-WORKFLOW.md) · [Dữ liệu](docs/04-DATABASE.md)
+- [AI Agents](docs/05-AI-AGENTS.md) · [QC](docs/06-QUALITY-GATES.md) · [Giao diện](docs/07-UI-UX.md) · [Roadmap](docs/08-ROADMAP.md)
+- [Quy tắc cộng tác Codex](AGENTS.md) · [Quyết định](docs/DECISIONS.md)
+
+### Tích hợp bộ ZIP v2.0
+Bộ `ComicStudio_TatCaSkill_DuAn_QC_v2_2026-11-18.zip` là **nguồn quy tắc nghiệp vụ**, không phải code đã triển khai. Những phần được kế thừa gồm: Story/Beat ledger, Character Bible, Style/Mood/Mode, G0–G6 và checkpoint. Không đẩy bản thảo tiểu thuyết, tranh tham khảo, ảnh bị loại hay tệp được bảo hộ lên repo Public.
+
+## Bản quyền
+Mã nguồn và tài liệu khởi tạo không cấp phép quyền chuyển thể/phân phối bất kỳ tác phẩm nào. Tác giả vận hành hệ thống chịu trách nhiệm kiểm tra giấy phép nguồn và tài sản hình ảnh trước công bố.
