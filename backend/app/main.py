@@ -271,6 +271,8 @@ def create_app(db_path: str | Path | None = None) -> FastAPI:
         except sqlite3.IntegrityError:
             raise HTTPException(409, "Mã beat đã tồn tại trong dự án") from None
 
+    from .sources import create_source_router
+    app.include_router(create_source_router(store))
     return app
 
 
