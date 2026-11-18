@@ -2,6 +2,10 @@
 
 **Cập nhật:** 2026-11-18 · **Hướng triển khai:** A — nền tảng vững, mở rộng theo giai đoạn.
 
+## Quyết định cập nhật: Orchestration-first
+
+Studio là lớp giữ trí nhớ truyện, mẫu lệnh, skill, prompt pack và thẩm định kết quả GPT bên ngoài. Các chức năng sinh ảnh và AI model-serving trong tài liệu v0.1 là **phần tích hợp tùy chọn**, không phải phạm vi bắt buộc. Ưu tiên MVP Prompt Desk trước. Xem [09-GPT-ORCHESTRATION.md](09-GPT-ORCHESTRATION.md).
+
 ## 1. Bài toán
 Cần studio chuyển tiểu thuyết/kịch bản/ý tưởng sang manhua, manga, webtoon, comic; nhất quán cốt truyện, nhân vật, ngoại cảnh, thoại và khả năng chỉnh đúng vị trí. Hệ thống dùng giao diện web local-first, tránh phụ thuộc một nhà cung cấp AI.
 

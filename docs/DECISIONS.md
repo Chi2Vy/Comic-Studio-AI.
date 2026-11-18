@@ -17,3 +17,6 @@ Phase 1 làm project/chapters/character/beat trước. Chạy local không key. 
 
 ## ADR-006: Repository name
 GitHub hiện đặt tên `Chi2Vy/Comic-Studio-AI.` (có dấu chấm ở cuối). Không tự đổi tên repository.
+
+## ADR-007: GPT orchestration first (2026-11-18)
+Comic Studio là nơi giữ canon, setting, skill, prompt templates, version, result intake và QC. GPT là trình thực thi bên ngoài; mặc định copy/export prompt và import kết quả thủ công. Không tự triển khai model/GPU pipeline; adapter AI API là tùy chọn, cần quyền và ngân sách.

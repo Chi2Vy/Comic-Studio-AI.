@@ -1,5 +1,9 @@
 # UI/UX Studio — phác thảo và chức năng
 
+## Trọng tâm UI mới: Prompt Desk
+
+Tạo gói lệnh GPT (không gọi AI): chọn project, loại việc, chap/page/panel, Skill và bản nguồn; trình biên soạn phải hiển thị setting đã khóa và cảnh báo thiếu dữ liệu. Các hành động minh bạch: **Tạo prompt**, **Sao chép**, **Xuất gói**, **Nhập kết quả**, **QC**, **Tạo lệnh sửa**. Không dùng nút giả 'Run GPT' hay 'Gửi GPT' nếu chưa có tích hợp hỗ trợ. Xem [09-GPT-ORCHESTRATION.md](09-GPT-ORCHESTRATION.md).
+
 ## Bố cục
 - Sidebar: Tổng quan, Biên kịch, Nghiên cứu, Nhân vật, Storyboard, Dựng tranh, Biên tập, Kiểm duyệt, AI & Skill.
 - Topbar: tên studio, dự án hiện tại, trạng thái local và quyền nguồn.

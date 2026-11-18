@@ -1,5 +1,6 @@
 # Hướng dẫn cho Codex / AI contributors
 
+0. **Tôn chỉ đã chốt:** Studio điều phối GPT/AI ngoài ứng dụng bằng Prompt Packs, không xây local model/GPU pipeline như công cụ chính. Manual copy/import là luồng mặc định, không tự điều khiển ChatGPT web UI hoặc dùng API key khi chưa có phê duyệt. Xem docs/09-GPT-ORCHESTRATION.md.
 1. Làm theo `docs/01-PRD.md` và `docs/08-ROADMAP.md`; không báo chức năng đã hoàn tất nếu chưa có code và test.
 2. Nguồn truyện, ảnh nhân vật, trang tranh, bản thảo và checkpoint từng tác phẩm là dữ liệu riêng: **KHÔNG** commit vào repository Public. Kiểm tra `git status` trước khi push.
 3. Không tự thay đổi canon; mỗi beat cần `source_locator` và `verification_level`. Thiếu nguồn = `unverified`; AI suy luận không trở thành verified.
